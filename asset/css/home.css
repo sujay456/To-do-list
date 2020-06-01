@@ -1,0 +1,80 @@
+body
+{
+    text-align: center;
+}
+#to-header
+{
+    font-family: sans-serif;
+    color: sienna;
+
+}
+
+input{
+    height: 30px;
+}
+textarea
+{
+   position: relative;
+
+   top:13px;
+   
+}
+
+button
+{
+    color: rgb(31, 8, 8);
+    background-color: grey;
+    position: relative;
+    left: 10px;
+    width: 60px;
+    height: 40px;
+}
+#check
+{
+    color: grey;
+}
+
+#list
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.list-content
+{
+    /* border: 1px solid black; */
+    width: 150px;
+    height: 150px;
+    border-radius: 0.5cm;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.list-content:nth-child(2n)
+{
+    background-color: yellowgreen;
+}
+
+.list-content:nth-child(2n+1)
+{
+    background-color: tomato;
+}
+.style
+{
+    /* text-decoration: line-through; */
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    /* position: absolute; */
+    /* left: 20px; */
+    color: honeydew;
+}
+
+.tick
+{
+    position: absolute;
+    color: red;
+    bottom: 10px;
+    left: 80px;
+}
