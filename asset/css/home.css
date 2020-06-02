@@ -1,80 +1,133 @@
 body
 {
-    text-align: center;
+    background-color: rgb(196, 195, 195);
 }
-#to-header
-{
-    font-family: sans-serif;
-    color: sienna;
-
-}
-
-input{
-    height: 30px;
-}
-textarea
-{
-   position: relative;
-
-   top:13px;
-   
-}
-
-button
-{
-    color: rgb(31, 8, 8);
-    background-color: grey;
-    position: relative;
-    left: 10px;
-    width: 60px;
-    height: 40px;
-}
-#check
-{
-    color: grey;
-}
-
-#list
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.list-content
-{
-    /* border: 1px solid black; */
-    width: 150px;
-    height: 150px;
-    border-radius: 0.5cm;
-    padding: 10px;
-    position: relative;
-    margin-bottom: 10px;
-}
-.list-content:nth-child(2n)
-{
-    background-color: yellowgreen;
-}
-
-.list-content:nth-child(2n+1)
-{
-    background-color: tomato;
-}
-.style
-{
-    /* text-decoration: line-through; */
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    /* position: absolute; */
-    /* left: 20px; */
-    color: honeydew;
-}
-
-.tick
+/* for the container */
+#todo-container
 {
     position: absolute;
+    left: 35%;
+    width: 450px;
+    height: 750px;
+    /* border: 1px solid yellow; */
+    background-color: cornsilk;
+    border-top-left-radius:0.5cm ;
+    border-top-right-radius: 0.5cm;
+    overflow: hidden;
+}
+
+/* for the header */
+#delete-all
+{
+    color: white;
+}
+#todo-header
+{
+    height: 230px;
+    /* border: 1px solid red; */
+    overflow: hidden;
+
+}
+#header
+{
+    /* border: 1px solid green; */
+
+    font-family: sans-serif;
+    color: rgb(253, 246, 246);
+    font-size: 1.5rem;
+    position: absolute;
+    top:180px;
+    left: 10px;
+
+}
+
+#refresh
+{
+    color: white;
+    position: absolute;
+    top:20px;
+    right: 20px;
+    /* width: 40px; */
+}
+
+#input
+{
+    /* border: 1px solid black; */
+    /* border-top: 1px solid grey; */
+    width: 450px;
+    position: absolute;
+    bottom: 0px;
+    height: 50px;
+}
+#input h1
+{
+    display: inline-block;
+    position: relative;
+    bottom: 15px;
+}
+#input input
+{
+    width: 400px;
+    position: absolute;
+    top:1px;
+    left: 40px;
+    height: 40px;
+    outline: none; 
+    font-size: 1.3rem;
+    border-top-left-radius: 0.5cm;
+    border-bottom-left-radius: 0.5cm;
+    
+    border-top-right-radius: 0.5cm;
+    border-bottom-right-radius: 0.5cm;
+
+}
+#input input::placeholder
+{
+    color: lightskyblue;
+    opacity: 0.8;
+}
+#input i
+{
+
+    color: green;
+}
+
+/* To do List */
+#view-container
+{
+    overflow-y: auto;
+    /* overflow-y: hidden; */
+    /* border: 1px solid green; */
+    height: 460px;
+}
+
+.works
+{
+    border-bottom: 1px solid grey;
+    height: 50px;
+    position: relative;
+    
+}
+
+.style
+{
+    position: absolute;
+    left: 40px;
+    top:15px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.delete
+{
     color: red;
-    bottom: 10px;
-    left: 80px;
+    position: absolute;
+    right: 10px;
+    top:15px;
+}
+.complete
+{
+    position: absolute;
+    top:15px;
+    left: 5px;
 }

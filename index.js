@@ -19,6 +19,10 @@ app.use(express.static('asset'));
 
 //using middleware to get  the encoded information
 app.use(express.urlencoded());
+
+
+
+
 app.get('/',function(req,res)
 {
     // console.log(req.url);
@@ -82,7 +86,21 @@ app.get('/check',function(req,res)
 
     res.redirect('back');
 })
+//delete-all
 
+app.get('/delete',function(req,res)
+{
+    Todolist.deleteMany({},function(err,list)
+    {
+        if(err)
+        {
+            return;
+        }
+        console.log(list);
+    });
+    res.redirect('back');
+
+});
 //Listening 
 
 app.listen(port,function(err)
