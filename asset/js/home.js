@@ -31,32 +31,68 @@ for(let c=0;c<o.length;++c)
 {
     list.push(o[c].innerText);
 }
-var count=[];
+
+// for(let c =0;c<o.length;c++)
+// {
+//     localStorage.setItem(o[c].innerText,"false");
+// }
+
+//this is mandatory for line-through
+
+
 for(let c =0;c<o.length;c++)
 {
-    count[c]=0;
-}
-function print(con)
-{
-    console.log(con);
-    let o=$('.style');
+    console.log("hi every time added");
+    if(localStorage.getItem(o[c].innerText)=="true")
+    {
 
+        o[c].style.textDecoration="line-through";
+
+    }
+}
+function change(list)
+{
+    console.log("hello");
+}
+function print(con,whole)
+{
+    console.log(whole);
+    
     for(let c =0;c<o.length;++c)
     {
         if(o[c].innerText==con)
         {
-            count[c]++;
-            if(count[c]%2!=0){
-            console.log('uff');
-            o[c].style.textDecoration="line-through";
+
+            if(localStorage.getItem(con)=='false')
+            {
+                localStorage.setItem(con,"true");
+                console.log(localStorage.getItem(con));
+                o[c].style.textDecoration="line-through";
             }
             else
             {
+                localStorage.setItem(con,"false");
+
                 o[c].style.textDecoration='none';
+
             }
+            // count[c]++;
+            // if(count[c]%2!=0){
+            // console.log('uff');
+            // o[c].style.textDecoration="line-through";
+            // }
+            // else
+            // {
+            //     o[c].style.textDecoration='none';
+            // }
 
         }
     }
     // console.log("Hi i am sujay");
     // console.log($('.style'));
+}
+
+function False()
+{
+    return false;
 }

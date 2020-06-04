@@ -31,10 +31,10 @@
         <div id="view-container">
 
             <% for(let c of list){ %>
-                <div class="works">
-                    <input class="complete" type="checkbox" value="false" onchange="print('<%= c.content %>')">
+                <div class="works" >
+                    <input class="complete" type="checkbox" value="false" onchange="print('<%= c.content %>')" >
                     <span class="style"><%= c.content %></span>
-                    <a class="delete" href="/check/?id=<%= c._id %>">
+                    <a class="delete" href="/check/?id=<%= c._id %>" onclick="False()">
                       <i class="fas fa-trash"></i>
                     </a>
                 </div>
