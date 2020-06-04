@@ -24,3 +24,39 @@ $('#todo-container').append(x);
 // })
 
 var list=[];
+
+var o=$('.style');
+
+for(let c=0;c<o.length;++c)
+{
+    list.push(o[c].innerText);
+}
+var count=[];
+for(let c =0;c<o.length;c++)
+{
+    count[c]=0;
+}
+function print(con)
+{
+    console.log(con);
+    let o=$('.style');
+
+    for(let c =0;c<o.length;++c)
+    {
+        if(o[c].innerText==con)
+        {
+            count[c]++;
+            if(count[c]%2!=0){
+            console.log('uff');
+            o[c].style.textDecoration="line-through";
+            }
+            else
+            {
+                o[c].style.textDecoration='none';
+            }
+
+        }
+    }
+    // console.log("Hi i am sujay");
+    // console.log($('.style'));
+}

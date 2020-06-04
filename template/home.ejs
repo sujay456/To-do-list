@@ -32,7 +32,7 @@
 
             <% for(let c of list){ %>
                 <div class="works">
-                    <input class="complete" type="checkbox" value="false">
+                    <input class="complete" type="checkbox" value="false" onchange="print('<%= c.content %>')">
                     <span class="style"><%= c.content %></span>
                     <a class="delete" href="/check/?id=<%= c._id %>">
                       <i class="fas fa-trash"></i>

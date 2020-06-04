@@ -12,4 +12,4 @@ connection.on('error',console.error.bind(console,'error'));
 connection.once('open',function()
 {
     console.log('succesfully connected to mongodb');
-})
+});
