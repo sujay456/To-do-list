@@ -10,7 +10,7 @@
     <title>Home</title>
 </head>
 <body>
-  <!-- This is the header -->
+  <!-- ----------------------------------This is the header -------------------------------------->
       <div id="todo-container">
         
         <div id="todo-header">
@@ -18,16 +18,16 @@
             <img src="/images/wall.jpg" width="450px" >
             <!-- for deleting all the to dos -->
             <a href="">
-                  <h2>
+                  <h1>
                       <a id="delete-all" href="/delete">
                     
                         <i id="refresh" class="fas fa-sync"></i>
 
                       </a>
-                  </h2>
+                  </h1>
             </a>
         </div>
-        <!-- This is the view section -->
+        <!-------------------------------- This is the view section ------------------------------>
         <div id="view-container">
 
             <% for(let c of list){ %>
@@ -35,6 +35,7 @@
                     <input class="complete" type="checkbox" value="false" onchange="print('<%= c.content %>')" >
                     <span class="style"><%= c.content %></span>
                     <a class="delete" href="/check/?id=<%= c._id %>" onclick="False()">
+                      
                       <i class="fas fa-trash"></i>
                     </a>
                 </div>
@@ -42,15 +43,31 @@
             <% } %>
         </div>
 
-        <!-- This is the input section -->
+        <!-- -------------------------------This is the input section ---------------------------->
         <div id="input">
             
-            <h1>
-            <i class="fas fa-plus-circle"></i>
-            </h1>            
+            <!-- <h1>
+                <button>
+                    <i class="fas fa-plus-circle"></i>
+               </button>              
+            </h1>           -->
             <form action="/form" method="post">
-              <input type="text" name="content" placeholder="Add To do" required>
+                    
+              <input id="des" type="text" name="content" placeholder="Add To do" required>
+              <button>
+                <i class="fas fa-plus"></i>
+                ADD 
+              </button>
+              <select name="category">
+                <option>Choose a category</option>
+                <option>Work</option>
+                <option>Personal</option>
+                <option>Study</option>
+                <option>Other</option>
+              </select>
 
+              <input id="date" name="date" type="date"> 
+              
             </form>
 
         </div>

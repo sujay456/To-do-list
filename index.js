@@ -1,32 +1,47 @@
+//Requiring the express js
 const express=require('express');
-const port=9000;
+const app=express();
+
+
+//server will run on port:8000
+const port=8000;
+
+
 const path=require('path');
 
-const app=express();
-//connected db
 
+//connected db
 const db=require('./config/mongoos');
 
-//defining the schema
 
+
+//defining the schema
 const Todolist=require('./models/todo');
+
+
+
 //for setting up the template/views folder  for ejs file
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'template'));
 
+
+
+
 //using midleware to use the static files
 app.use(express.static('asset'));
+
+
 
 //using middleware to get  the encoded information
 app.use(express.urlencoded());
 
 
 
-
+//Home page
 app.get('/',function(req,res)
 {
-    // console.log(req.url);
-
+    
+    // Here all the to dos will be searched and will be passed
     Todolist.find({},function(err,list)
     {
         if(err)
@@ -40,23 +55,19 @@ app.get('/',function(req,res)
         });
 
     });
-    //res.render('home',);   
-    // res.send('yes server is doing something');
-
 });
 
-app.get('/profile',function(req,res)
-{
-    
-    res.render('profile');
-})
 
 
 
+//This is will take the input from the user 
 app.post('/form',function(req,res){
     
+
+    //printing the information coming from the user
     console.log(req.body);
 
+    //creating the list through the schema
     Todolist.create(req.body,function(err,newList)
     {
         if(err)
@@ -71,7 +82,9 @@ app.post('/form',function(req,res){
 
 });
 
-//for the check 
+
+
+//This is for the deletin of a particuar to do  
 app.get('/check',function(req,res)
 {
     console.log(req.query);
@@ -86,7 +99,10 @@ app.get('/check',function(req,res)
 
     res.redirect('back');
 })
-//delete-all
+
+
+
+// this is for deleting/refreshing all the todos
 
 app.get('/delete',function(req,res)
 {

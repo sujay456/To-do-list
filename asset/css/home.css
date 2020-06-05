@@ -2,7 +2,7 @@ body
 {
     background-color: rgb(196, 195, 195);
 }
-/* for the container */
+/* ---------------------------for the container --------------------------------------------*/
 #todo-container
 {
     position: absolute;
@@ -17,11 +17,8 @@ body
     
 }
 
-/* for the header */
-#delete-all
-{
-    color: white;
-}
+/*--------------------------- for the header -----------------------------------------------*/
+
 #todo-header
 {
     height: 230px;
@@ -42,6 +39,7 @@ body
 
 }
 
+/* Refresh icon */
 #refresh
 {
     color: white;
@@ -51,14 +49,27 @@ body
     /* width: 40px; */
 }
 
+/* ------------------------------Input section------------------------------------------ */
 #input
 {
     /* border: 1px solid black; */
     /* border-top: 1px solid grey; */
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
     width: 450px;
     position: absolute;
     bottom: 0px;
-    height: 50px;
+    height: 118px;
+}
+#input select
+{
+    position: absolute;
+    bottom: 0px;
+    height: 68px;
+    width: 225px;
+    /* font-style: italic; */
+    font-family: sans-serif;
+    font-size: 1.1rem;
 }
 #input h1
 {
@@ -66,20 +77,48 @@ body
     position: relative;
     bottom: 15px;
 }
-#input input
+
+#date
 {
-    width: 400px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 220px;
+    height: 64px;
+    font-size: 1.1rem;
+    
+
+}
+#input button
+{
+    position: absolute;
+    /* bottom: 0px; */
+    right: 0px;
+    width: 95px;
+    height: 50px;
+    text-align: middle;
+    color: white;
+    background-color: grey;
+}
+#des
+{
+
+    width: 350px;
     position: absolute;
     top:1px;
-    left: 40px;
-    height: 40px;
+    left: 0px;
+    height: 47px;
     outline: none; 
     font-size: 1.3rem;
-    border-top-left-radius: 0.5cm;
-    border-bottom-left-radius: 0.5cm;
+    border:none;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    /* border-top-left-radius: 0.5cm; */
+    /* border-bottom-left-radius: 0.5cm; */
     
-    border-top-right-radius: 0.5cm;
-    border-bottom-right-radius: 0.5cm;
+    /* border-top-right-radius: 0.5cm; */
+    /* border-bottom-right-radius: 0.5cm; */
 
 }
 #input input::placeholder
@@ -87,19 +126,20 @@ body
     color: lightskyblue;
     opacity: 0.8;
 }
+
 #input i
 {
 
     color: green;
 }
 
-/* To do List */
+/*--------------------------------- To do List view----------------------------------- */
 #view-container
 {
     overflow-y: auto;
     /* overflow-y: hidden; */
     /* border: 1px solid green; */
-    height: 460px;
+    height: 400px;
 }
 
 .works
@@ -107,6 +147,7 @@ body
     border-bottom: 1px solid grey;
     height: 50px;
     position: relative;
+    /* border-right: 1px solid red; */
     
 }
 
@@ -118,6 +159,7 @@ body
     font-family: sans-serif;
     font-size: 1.2rem;
     font-weight: lighter;
+    /* border: 1px solid green; */
 }
 .delete
 {
@@ -125,6 +167,10 @@ body
     position: absolute;
     right: 10px;
     top:15px;
+}
+#delete-all
+{
+    color: white;
 }
 .complete
 {
