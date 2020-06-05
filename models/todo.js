@@ -7,6 +7,15 @@ const TodoSchema= new mongoose.Schema({
     {
         type:String,
         required:true
+    },
+    category:
+    {
+        type:String,
+
+    },
+    date:
+    {
+        type:String
     }
 });
 

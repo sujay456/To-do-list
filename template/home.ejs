@@ -34,6 +34,11 @@
                 <div class="works" >
                     <input class="complete" type="checkbox" value="false" onchange="print('<%= c.content %>')" >
                     <span class="style"><%= c.content %></span>
+                    <div class="category"><%= c.category %></div>
+                    <div class="due">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span >Due date <%= c.date %></span>
+                    </div>
                     <a class="delete" href="/check/?id=<%= c._id %>" onclick="False()">
                       
                       <i class="fas fa-trash"></i>

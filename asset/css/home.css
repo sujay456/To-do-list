@@ -7,6 +7,7 @@ body
 {
     position: absolute;
     left: 35%;
+    /* text-align: center; */
     width: 450px;
     height: 750px;
     /* border: 1px solid yellow; */
@@ -145,7 +146,7 @@ body
 .works
 {
     border-bottom: 1px solid grey;
-    height: 50px;
+    height: 60px;
     position: relative;
     /* border-right: 1px solid red; */
     
@@ -161,12 +162,34 @@ body
     font-weight: lighter;
     /* border: 1px solid green; */
 }
+
+/* For the category part */
+.category
+{
+   position: absolute;
+   top:10px;
+   left: 300px;
+   /* border: 1px solid black; */
+   padding: 10px;
+   color: white;
+   /* background-color: indigo; */
+   font-family: sans-serif;
+}
+
+.due
+{
+    position: absolute;
+    top:40px;
+    left: 40px;
+    color: grey;
+    font-size: 0.7rem;;
+}
 .delete
 {
     color: red;
     position: absolute;
     right: 10px;
-    top:15px;
+    top:20px;
 }
 #delete-all
 {

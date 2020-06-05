@@ -27,13 +27,56 @@ $('#todo-container').append(x);
 //variables 
 // 1.list- This is an array for storing all the to do which is given by the user
 // 2.o   - This is DOM for the class style which is showing the content/desciption of to do
-
-
+// 3.p   - This is DOM for the class which is showing the category of to do
+// 4.q   - This is DOM for te class which is showing the due date 
 
 var list=[];
 
 var o=$('.style');
+var p=$('.category');
+var q=$('.due');
+var counter=true;
 
+//for the category
+for(let c=0;c<p.length;++c)
+{
+    if(p[c].innerText=="Choose a category")
+    {
+        p[c].innerText="";
+        
+        p[c].style.backgroundColor="cornsilk";
+
+        p[c].style.padding="0px";
+
+    }
+    else{
+        if(counter)
+        {
+            p[c].style.backgroundColor="indigo";
+            counter=false;
+        }
+        else
+        {
+            p[c].style.backgroundColor="orange";
+
+
+        }
+    }
+    
+
+}
+
+
+//for the due date
+for(let c=0;c<q.length;++c)
+{
+
+    if(q[c].innerText==" Due date")
+    {
+        console.log("Hi");
+        q[c].innerText="No Due Date";
+    }
+}
 
 //pushing all the to dos in the array "list"
 for(let c=0;c<o.length;++c)
