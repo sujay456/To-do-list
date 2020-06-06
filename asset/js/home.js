@@ -31,11 +31,13 @@ $('#todo-container').append(x);
 // 4.q   - This is DOM for te class which is showing the due date 
 
 var list=[];
+var color=['indigo','orange','olive','maroon'];
+var choose=0;
+
 
 var o=$('.style');
 var p=$('.category');
 var q=$('.due');
-var counter=true;
 
 //for the category
 for(let c=0;c<p.length;++c)
@@ -50,33 +52,18 @@ for(let c=0;c<p.length;++c)
 
     }
     else{
-        if(counter)
+        if(choose>3)
         {
-            p[c].style.backgroundColor="indigo";
-            counter=false;
+            choose=0;
         }
-        else
-        {
-            p[c].style.backgroundColor="orange";
-
-
-        }
+        console.log(choose);
+        p[c].style.backgroundColor=color[choose];
+        choose++;
     }
     
 
 }
 
-
-//for the due date
-for(let c=0;c<q.length;++c)
-{
-
-    if(q[c].innerText==" Due date")
-    {
-        console.log("Hi");
-        q[c].innerText="No Due Date";
-    }
-}
 
 //pushing all the to dos in the array "list"
 for(let c=0;c<o.length;++c)

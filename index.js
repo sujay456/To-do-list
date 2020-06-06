@@ -117,8 +117,10 @@ app.get('/delete',function(req,res)
     res.redirect('back');
 
 });
-//Listening 
 
+
+
+//Listening 
 app.listen(port,function(err)
 {
     if(err)
@@ -126,5 +128,5 @@ app.listen(port,function(err)
         console.log("Server is not Running ! Error");
         return;
     }
-    console.log("Server is up and running");
+    console.log(`Server is up and running on port:${port}`);
 })

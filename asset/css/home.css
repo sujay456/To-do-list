@@ -50,7 +50,9 @@ body
     /* width: 40px; */
 }
 
-/* ------------------------------Input section------------------------------------------ */
+
+/* -------------------------------End of header------------------------------------------ */
+/*--------------------------------Input section------------------------------------------ */
 #input
 {
     /* border: 1px solid black; */
@@ -79,6 +81,7 @@ body
     bottom: 15px;
 }
 
+/* style for due date */
 #date
 {
     position: absolute;
@@ -101,6 +104,8 @@ body
     color: white;
     background-color: grey;
 }
+
+/* styles for the description of the tods */
 #des
 {
 
@@ -133,8 +138,10 @@ body
 
     color: green;
 }
-
+/* ---------------------------------End of input section----------------------------------- */
 /*--------------------------------- To do List view----------------------------------- */
+
+
 #view-container
 {
     overflow-y: auto;
@@ -142,6 +149,7 @@ body
     /* border: 1px solid green; */
     height: 400px;
 }
+
 
 .works
 {
@@ -151,6 +159,7 @@ body
     /* border-right: 1px solid red; */
     
 }
+
 
 .style
 {
@@ -164,6 +173,7 @@ body
 }
 
 /* For the category part */
+
 .category
 {
    position: absolute;
@@ -172,9 +182,10 @@ body
    /* border: 1px solid black; */
    padding: 10px;
    color: white;
-   /* background-color: indigo; */
+   background-color: maroon;
    font-family: sans-serif;
 }
+
 
 .due
 {
@@ -184,6 +195,8 @@ body
     color: grey;
     font-size: 0.7rem;;
 }
+
+
 .delete
 {
     color: red;
@@ -191,13 +204,79 @@ body
     right: 10px;
     top:20px;
 }
+
+
 #delete-all
 {
     color: white;
 }
+
+
 .complete
 {
     position: absolute;
     top:15px;
     left: 5px;
+}
+
+/* -------------------------------------End of view section----------------------------------- */
+/* -------------------------------------responsive designs----------------------------------- */
+
+@media only screen and (max-width:1080px)
+{
+    #todo-container
+{
+    position: absolute;
+    left: 25%;
+    /* text-align: center; */
+    width: 450px;
+    height: 750px;
+    /* border: 1px solid yellow; */
+    background-color: cornsilk;
+    border-top-left-radius:0.5cm ;
+    border-top-right-radius: 0.5cm;
+    overflow: hidden;
+    
+}
+
+}
+
+@media only screen and (max-width:700px)
+{
+    #todo-container
+{
+    position: absolute;
+    left: 10%;
+    /* text-align: center; */
+    width: 450px;
+    height: 750px;
+    /* border: 1px solid yellow; */
+    background-color: cornsilk;
+    border-top-left-radius:0.5cm ;
+    border-top-right-radius: 0.5cm;
+    overflow: hidden;
+    
+}
+
+}
+
+@media only screen and (max-width:500px)
+{
+    #todo-container
+{
+    position: absolute;
+    left: 0%;
+    top:0%;
+    /* text-align: center; */
+    width: 450px;
+    height: 100vh;
+    /* border: 1px solid yellow; */
+    background-color: cornsilk;
+    border-radius: 0cm;
+    /* border-top-left-radius:0.5cm ;
+    border-top-right-radius: 0.5cm; */
+    overflow: hidden;
+    
+}
+
 }
