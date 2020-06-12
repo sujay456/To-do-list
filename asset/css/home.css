@@ -9,8 +9,8 @@ body
     left: 35%;
     /* text-align: center; */
     width: 450px;
-    height: 750px;
-    /* border: 1px solid yellow; */
+    height: 850px;
+    border: 1px solid yellow;
     background-color: cornsilk;
     border-top-left-radius:0.5cm ;
     border-top-right-radius: 0.5cm;
